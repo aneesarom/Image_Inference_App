@@ -13,7 +13,7 @@ def image_inference(image):
     transformed_image = image_transform(image)
     inference_model.eval()
     with torch.no_grad():
-        output = inference_model(transformed_image)
+        output = inference_model(transformed_image.unsqueeze(0))
         class_index = torch.argmax(output, dim=-1)
         predicted_class = classes[class_index]
         return predicted_class

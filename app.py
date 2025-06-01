@@ -6,9 +6,6 @@ from src.model import vit_model
 
 st.title("Image Classification with ViT")
 
-config = toml.load("configuration.toml")
-image_size = config["image_configuration"]["image_size"]
-
 # Image uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
