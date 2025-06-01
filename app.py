@@ -4,7 +4,7 @@ import toml
 from src.inference import image_inference
 from src.model import vit_model
 
-st.title("Image Classification with ViT")
+st.title("Image Classification with ViT 16")
 
 # Image uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
